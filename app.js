@@ -1,4 +1,10 @@
-document.getElementById('loan-form').addEventListener('submit',calculateResults);
+document.getElementById('loan-form').addEventListener('submit',function(e){
+    document.getElementById('results').style.display = 'none';
+
+    document.getElementById('loader').style.display = 'none';
+
+    e.preventDefault();
+});
 
 function calculateResults(e){
     console.log('cal');
@@ -29,7 +35,7 @@ function calculateResults(e){
 
     }
     
-    e.preventDefault();
+    
   
 }
 
